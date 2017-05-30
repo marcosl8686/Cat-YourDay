@@ -22,13 +22,14 @@ console.log("action:", action);
 				availableGifs: action.payload.data.data
 			};
 			
-		case SELECT_GIF: 
+		case SELECT_GIF:
+			console.log(action.payload);
 			return {
 				...state, 
 				availableGifs: action.payload.availableGifs,
 				selectedGif: action.payload.selectedGif
 				
-			}
+			};
 		
 		default:
 		return state;
