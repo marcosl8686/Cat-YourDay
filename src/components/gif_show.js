@@ -17,7 +17,9 @@ class GifShow extends Component {
 			<div>		
 				<div className="row">
 					<div className="container">
-						GIF should be here
+
+					Image here
+				
 		        	</div>
 		        </div>
 		        <button className="btn btn-primary"> Next</button>
