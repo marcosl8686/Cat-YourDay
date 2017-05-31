@@ -11,21 +11,17 @@ const API_KEY = "dc6zaTOxFJmzC"
 export function fetchGif() {
 	const request = axios.get(`${ROOT_URL}&limit=100&api_key=${API_KEY}`);
 
-	console.log('request:', request);
 	return {
 		type: FETCH_GIFS,
 		payload: request
 	};
 }
 export function selectGif(gifArr) {
-	//with the gifArr, randomly select one gif and store it into a var
-//then remove it from the gifArr so that it can't be selected again
-//then return the following object
+	//randomly select a number based on the length of the array
 	let randomNum = _.random(gifArr.length);
 	let randomSelection = gifArr[randomNum];
-
+	//remove one object from the array with randomNum
 	gifArr.splice(randomNum, 1);
-	console.log(gifArr, randomSelection);
 
 	return {
 		type: SELECT_GIF,
