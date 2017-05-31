@@ -11,6 +11,7 @@
 .gifContainer {
 	margin-top:150px;
 	text-align: center;
+	background-color: rgba(213, 216, 229, 0.5)!important; 
 }
 
 .jumbotron {
